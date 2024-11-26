@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) wap to find min or max first in a given input
+    a=28345
+    output: min is first -->
+    <script>
+        let num=28345;
+        let str=String(num);
+        min=str[0];
+        for(i of str){
+            if(min>i){
+                min=i;
+            }
+        }
+        console.log("minimum value",min);
+    </script>
+  
+   <!-- a=8737
+   output: max is first -->
+  <script>
+    let num1=8737;
+        let str1=String(num1);
+        max=str[0];
+        for(i of str1){
+            if(max<i){
+                max=i;
+            }
+        }
+        console.log("maximum value",max);
+  </script>
+  
+   <!-- write a function to generate random otp -->
+
+ 
+ <h1>Your OTP: <span id="otp"></span></h1>
+    <button id="generate">Generate OTP</button>
+
+    <script>
+        function generateOTP() {
+            a=10000
+            const otp = Math.floor(Math.random()*a); 
+            document.getElementById('otp').innerText = otp; 
+        }
+
+        document.getElementById('generate').addEventListener('click', generateOTP);
+
+        generateOTP(4);
+    </script>
+    
+</body>
+</html>
